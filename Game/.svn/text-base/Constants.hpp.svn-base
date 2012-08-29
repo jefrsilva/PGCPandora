@@ -1,0 +1,63 @@
+#ifndef _INC_CONSTANTS_HPP
+#define _INC_CONSTANTS_HPP
+
+const double EPSILON = 1.0e-5;
+
+const int dirX[] = {-1,  0,  1,  1,  0, -1};
+const int dirY[] = { 0, -1, -1,  0,  1,  1};
+
+const int FACTION_MIN   = -1200;
+const int FACTION_LOWER = -360;
+const int FACTION_UPPER =  360;
+const int FACTION_MAX   =  1200;
+
+const int CELL_RADIUS = 10.0;
+
+enum Faction {FACTION_ENEMY   = -1,
+	      FACTION_NEUTRAL =  0,
+	      FACTION_ALLY    =  1};
+
+enum VirusColor {VIRUS_COLOR_RED,
+		 VIRUS_COLOR_GREEN,
+		 VIRUS_COLOR_BLUE,
+		 VIRUS_COLOR_YELLOW};
+
+enum VirusBodyType {VIRUS_BODYTYPE_WORM,
+		    VIRUS_BODYTYPE_AMOEBA,
+		    VIRUS_BODYTYPE_SPHERE};
+
+enum AntibodyType {ANTIBODYTYPE_SQUARE = 1,
+		   ANTIBODYTYPE_CIRCLE = 2,
+		   ANTIBODYTYPE_TRIANGLE = 4};
+
+enum ProteinType {PROTEINTYPE_NONE = 0,
+                  PROTEINTYPE_SQUARE = 1,
+		  PROTEINTYPE_CIRCLE = 2,
+		  PROTEINTYPE_TRIANGLE = 4};
+
+enum ModelId {MODELID_NONE_CELL,
+	      MODELID_SQUARE_CELL,
+	      MODELID_CIRCLE_CELL,
+	      MODELID_TRIANGLE_CELL};
+
+enum CellState {CELLSTATE_IDLE,
+		CELLSTATE_TAKEN,
+		CELLSTATE_CLONING,
+		CELLSTATE_DEAD};
+
+enum VirusState {VIRUSSTATE_INACTIVE,
+		 VIRUSSTATE_TAKINGCELL,
+		 VIRUSSTATE_IDLE,
+		 VIRUSSTATE_MOVING};
+
+enum VirusCommand {VIRUSCOMMAND_ADVANCE,
+		   VIRUSCOMMAND_RETREAT,
+		   VIRUSCOMMAND_WAIT,
+		   VIRUSCOMMAND_EXPAND,
+		   VIRUSCOMMAND_ATTACK};
+
+enum TileType {TILE_BORDER,
+	       TILE_CELL,
+	       TILE_EMPTY};
+
+#endif
